@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Variables */
+:root {
+  --primaryColor: #56a5eb;
+  --blackColor: #333;
+  --whiteColor: #fff;
+  --bodyColor: #e5faff;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--bodyColor);
+}
+
+h1 {
+  font-size: 5.4rem;
+  font-weight: 700;
+  color: #56a5eb;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+/* UTILITIES */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.container > * {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+/* FLEX */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: var(--whiteColor);
+  color: var(--primaryColor);
+  width: 20rem;
+  border: 0.1rem solid var(--primaryColor);
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.btn:hover {
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+  cursor: pointer;
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
