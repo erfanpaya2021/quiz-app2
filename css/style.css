@@ -6,6 +6,7 @@
   --greenColor: #aaf5bc;
   --redColor: #fbbbc1;
   --blackColor: #333;
+  --grayColor: #aaa;
   --whiteColor: #fff;
   --bodyColor: #e5faff;
 }
@@ -117,4 +118,24 @@ h4 {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  font-size: 1.8rem;
+  box-shadow: 0 0.1rem 1.4rem rgba(86, 185, 235, 0.5);
+  width: 20rem;
+  outline: 0;
+  border: 0vh;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+input::placeholder {
+  color: var(--grayColor);
 }

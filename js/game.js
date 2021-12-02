@@ -54,6 +54,8 @@ const startGame = () => {
 const getNewQuestion = () => {
   // GO TO END PAGE
   if (availableQuestions.length === 0 || questionCounter === MAX_QUESTIONS) {
+    // SET MOST RECENT SCORE
+    localStorage.setItem("mostRecentScore", score);
     window.location.assign("../end.html");
   }
 
