@@ -16,6 +16,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  list-style: none;
   color: #333;
   padding: 0;
   margin: 0;
@@ -120,6 +121,7 @@ h4 {
   transform: none;
 }
 
+/* END PAGE STYLES */
 form {
   display: flex;
   flex-direction: column;
@@ -138,4 +140,21 @@ input {
 
 input::placeholder {
   color: var(--grayColor);
+}
+
+/* HIGHSCORES PAGE STYLES */
+.high-scores-list {
+  width: 20rem;
+  margin-bottom: 4rem;
+}
+
+.high-scores-list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.high-scores-list-item:hover {
+  transform: scale(1.025);
 }
