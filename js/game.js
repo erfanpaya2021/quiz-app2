@@ -66,7 +66,7 @@ const getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter === MAX_QUESTIONS) {
     // SET MOST RECENT SCORE
     localStorage.setItem("mostRecentScore", score);
-    window.location.assign("../end.html");
+    window.location.assign("/end.html");
   }
 
   // DISPLAY QUESTION COUNTER AND PROGRESS BAR
