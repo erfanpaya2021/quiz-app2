@@ -62,3 +62,22 @@
 .incorrect {
   background-color: var(--redColor);
 }
+
+/* LOADER */
+.loader {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1.5rem solid var(--whiteColor);
+  border-top-color: var(--primaryColor) ;
+  animation:  loaderAnimation  2s infinite linear;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

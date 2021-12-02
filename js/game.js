@@ -4,6 +4,8 @@ const choices = document.querySelectorAll(".choice-text");
 const progressText = document.querySelector("#progress-text");
 const progressBar = document.querySelector(".progress-inner-div");
 const scoreText = document.querySelector("#score");
+const game = document.querySelector(".game");
+const loader = document.querySelector(".loader");
 
 // VARIABLES
 let currentQuestion = {};
@@ -20,7 +22,7 @@ const getDataFromUrl = async () => {
   );
   const data = await respone.json();
   const loadedQuestions = data.results;
-  loadedQuestions.map((loadedQuestion) => {
+  questions = loadedQuestions.map((loadedQuestion) => {
     // CREATE FORMATTED QUESTION AND ADD QUESTION TO OBJ
     const formattedQuestion = {
       question: loadedQuestion.question,
@@ -36,16 +38,21 @@ const getDataFromUrl = async () => {
 
     // ADD ANSWER TO OBJ
     formattedQuestion["answer"] = answer + 1;
-    questions.push(formattedQuestion);
-    startGame();
+
+    // RETURN OBJ
+    return formattedQuestion;
   });
+
+  game.classList.remove("hidden");
+  loader.classList.add("hidden");
+  startGame();
 };
 
 getDataFromUrl();
 
 // CONSTANTS
 const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const MAX_QUESTIONS = 5;
 
 const startGame = () => {
   questionCounter = 0;
