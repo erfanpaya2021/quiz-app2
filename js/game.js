@@ -1,7 +1,8 @@
 // DOM VARIABLES
 const question = document.querySelector(".question");
 const choices = document.querySelectorAll(".choice-text");
-const questionCounterText = document.querySelector("#question-count");
+const progressText = document.querySelector("#progress-text");
+const progressBar = document.querySelector(".progress-inner-div");
 const scoreText = document.querySelector("#score");
 
 // VARIABLES
@@ -56,9 +57,12 @@ const getNewQuestion = () => {
     window.location.assign("../end.html");
   }
 
-  // GET QUESTION FROM AVAILABLE QUESTION LIST
+  // DISPLAY QUESTION COUNTER AND PROGRESS BAR
   questionCounter++;
-  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+  progressText.innerText = `Question: ${questionCounter}/${MAX_QUESTIONS}`;
+  progressBar.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
+  // GET RANDOM QUESTION FROM AVAILABLES QUESTION LIST
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
 

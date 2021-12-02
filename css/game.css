@@ -13,6 +13,20 @@
   text-align: center;
 }
 
+/* PROGRESS BAR */
+.progress-outter-div {
+  width: 20rem;
+  height: 4rem;
+  border: .3rem solid var(--primaryColor);
+  margin-top: 1.5rem;
+}
+
+.progress-inner-div {
+  background-color: var(--primaryColor);
+  height: 3.4rem;
+  width: 0;
+}
+
 /* QUESTION SECTION */
 .choice-container {
   display: flex;
