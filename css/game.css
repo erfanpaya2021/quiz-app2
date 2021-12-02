@@ -1,3 +1,19 @@
+/* HUD SECTION */
+.hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+/* QUESTION SECTION */
 .choice-container {
   display: flex;
   font-size: 1.8rem;
